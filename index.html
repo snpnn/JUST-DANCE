@@ -96,22 +96,22 @@
         </div>
     </div>
 </section>
-        <section1>
+        <section>
                     <div class="price">
                         <h3 class="dance-button cursor">Price</h3>
-                            <p> Пробное занятие 600/500*</p>
-                            <p> Разовое занятие 800/700*</p>
-                            <p> Студенческий абонемент на 4 занятия 2300/2100*</p>
-                            <p> Студенческий абонемент на 8 занятий 4400/4000*</p>
-                            <p> Студенческий абонемент на 12 занятий 6200/5600*</p>
-                            <p> Студенческий абонемент на 16 занятий 7800/7000*</p>
-                            <p> Взрослый абонемент на 4 занятия 2500/2300*</p>
-                            <p> Взрослый абонемент на 8 занятий 4800/4300*</p>
-                            <p> Взрослый абонемент на 12 занятий 6800/6100*</p>
-                            <p> Взрослый абонемент на 16 занятий 8500/7700*</p>
+                            <div class="price-justify"><p> Пробное занятие</p> <p>600/500*</p></div>
+                            <div class="price-justify"><p> Разовое занятие</p> <p>800/700*</p></div>
+                            <div class="price-justify"><p> Студенческий абонемент на 4 занятия</p> <p>2300/2100*</p></div>
+                            <div class="price-justify"><p> Студенческий абонемент на на 8 занятий</p> <p>4400/4000*</p></div>
+                            <div class="price-justify"><p> Студенческий абонемент на 12 занятий</p> <p>6200/5600*</p></div>
+                            <div class="price-justify"><p> Студенческий абонемент на 16 занятий</p> <p>7800/7000*</p></div>
+                            <div class="price-justify"><p> Взрослый абонемент на 4 занятия</p> <p>2500/2300*</p></div>
+                            <div class="price-justify"><p> Взрослый абонемент на 8 занятий</p> <p>4800/4300*</p></div>
+                            <div class="price-justify"><p> Взрослый абонемент на 12 занятий</p> <p>6800/6100*</p></div>
+                            <div class="price-justify"><p> Взрослый абонемент на 16 занятий</p> <p>8500/7700*</p></div>
                             <a> *подробная информация о скидках у администратора</a>
                     </div>
-        </section1>
+        </section>
     </main>
 
 </body>
@@ -180,14 +180,8 @@
         }
     .street {
         display: flex;
-        padding: 10px;
-        border: black;
-        border-radius: 10px;
-        width: 500px;
         height: 750px;
-        margin: 50px;
-        text-align: center;
-        align-content: center;
+        margin: 50px 0;
     }
     .local {
         border-radius: 20px;
@@ -217,18 +211,22 @@
         font-size: 20px;
         font-family: Comforta;
     }
-            section1 p {
-            color: black;
-            border: black 3px groove;
-            border-radius: 10px;
-            padding: 5px;
-            background-color: var(--salmon-pink);
-            width: 90%;
-            align-items: center;
-            margin: auto;      
-            font-size: 20px;
-            height: 30px;
-    }
+           
+    
+                .price-justify {
+                display: flex;
+                justify-content: space-between;
+                color: black;
+                border: black 3px groove;
+                border-radius: 10px;
+                padding: 5px;
+                background-color: var(--salmon-pink);
+                width: 90%;
+                align-items: center;
+                margin: auto;      
+                font-size: 20px;
+                height: 30px;
+        }
         header {
             display: flex;
             justify-content: space-between;
