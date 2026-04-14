@@ -36,10 +36,11 @@
                         </h2>
                     </div>
                     <div >
-                        <button class="button cursor" >
-                            
-                            <a href="#name">Записаться на пробное</a>
+                        <a href="#name">
+                        <button class="button cursor" >    
+                                Записаться на пробное
                         </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -114,54 +115,61 @@
                     </div>
         </section>
         <section>
-            <div class="form">
-                 <h3 class="form-button"><p>Запишись на пробное занятие!</h3>
-                    <Div class="margin-line"><p>Танцы для любого возраста и уровня подготовки.  Пробное занятие 500 р. Для детей 3-6 лет - бесплатно. Запись через эту форму дает право на скидку в 15%, при приобретении первого абонемента.</p> 
-                    <div>
-                        <label for="name">ФИО:</label>
-                        <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        minlength="4"
-                        maxlength="50"
-                        size="50">
-                    </div>
-                    <div>
-                    <label for="name">Телефон:</label>
-                    <input
-                    type="tel"
-                    id="name"
-                    name="name"
-                    required
-                    minlength="4"
-                    maxlength="11"
-                    size="50">
-                    </div>
-                    <div>
-                    <label for="name">Возраст:</label>
-                    <input
-                    type="number"
-                    id="name"
-                    name="name"
-                    required
-                    minlength="1"
-                    maxlength="2"
-                    size="50">
-                   </div>
-                   <form action="/submit">
-                    <label for="conn">Способ связи:</label>
-                    <select id="conn" name="conn" required>
-                    <option value="">-- Выберите способ связи --</option>
-                    <option value="vk">ВКонтакте</option>
-                    <option value="tg">Телеграм</option>
-                    <option value="sms">Написать СМС по указанному номеру</option>
-                    <option value="tf">Позвонить по указанному номеру</option>
-                    </select>
-                    <div><button class="send-button cursor" type="submit">Отправить</button></div>
-                    </form>
-                    </Div>
+            <div id="name" class="form column-space-between" >
+                <div >
+                <h3 class="form-button">
+                    Запишись на пробное занятие!
+                </h3>
+
+                <div class="margin-line">
+                    <p>Танцы для любого возраста и уровня подготовки.  Пробное занятие 500 р. Для детей 3-6 лет - бесплатно. Запись через эту форму дает право на скидку в 15%, при приобретении первого абонемента.</p> 
+
+                        <div>
+                            <label for="name">ФИО:</label>
+                            <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            minlength="4"
+                            maxlength="50">
+                        </div>
+                        <div>
+                            <label for="name">Телефон:</label>
+                            <input
+                            type="tel"
+                            id="name"
+                            name="name"
+                            required
+                            minlength="4"
+                            maxlength="11">
+                        </div>
+                            <div>
+                            <label for="name">Возраст:</label>
+                            <input
+                            type="number"
+                            
+                            name="name"
+                            required>
+                        </div>
+                        <div>   
+                                <label for="conn">Способ связи:</label>
+                                    <select id="conn" name="conn" required >
+                                        <option value="">-- Выберите способ связи --</option>
+                                        <option value="vk">ВКонтакте</option>
+                                        <option value="tg">Телеграм</option>
+                                        <option value="sms">Написать СМС по указанному номеру</option>
+                                        <option value="tf">Позвонить по указанному номеру</option>
+                                    </select>
+                                </div>
+                            </div> 
+                        </div>
+                        <div>
+                            <button class="send-button cursor" type="submit">
+                                Отправить
+                            </button>
+                        </div>
+                
             </div>
             </div>
             
@@ -201,7 +209,11 @@
             
         }
         
-    
+    html{
+
+        scroll-behavior: smooth;
+
+    }
         body {
             background-color: var(--light-pink);
             margin: 0%;
@@ -254,6 +266,24 @@
             scale: 1.1;
         
         }
+        .margin-line input {
+            width: 400px;
+            height: 34px;
+            padding: 0;
+            background-color: var(--salmon-pink);
+            border: black 3px groove;
+            border-radius: 10px;
+            font-family: Comforta;
+
+        }
+        .margin-line select {
+            min-width: 404px;
+            min-height: 30px;
+            padding: 10px;
+            background-color: var(--salmon-pink);
+            border: black 3px groove;
+            border-radius: 10px;
+            font-family: Comforta;
         }
         .dance-button:hover {
             scale: 1.1;
