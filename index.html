@@ -35,9 +35,10 @@
                             связок, чтобы блеснуть на вечеринке, тоже добавим.
                         </h2>
                     </div>
-                    <div>
-                        <button class="button cursor">
-                            Записаться на пробное
+                    <div >
+                        <button class="button cursor" >
+                            
+                            <a href="#name">Записаться на пробное</a>
                         </button>
                     </div>
                 </div>
@@ -112,6 +113,59 @@
                             <a> *подробная информация о скидках у администратора</a>
                     </div>
         </section>
+        <section>
+            <div class="form">
+                 <h3 class="form-button"><p>Запишись на пробное занятие!</h3>
+                    <Div class="margin-line"><p>Танцы для любого возраста и уровня подготовки.  Пробное занятие 500 р. Для детей 3-6 лет - бесплатно. Запись через эту форму дает право на скидку в 15%, при приобретении первого абонемента.</p> 
+                    <div>
+                        <label for="name">ФИО:</label>
+                        <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        minlength="4"
+                        maxlength="50"
+                        size="50">
+                    </div>
+                    <div>
+                    <label for="name">Телефон:</label>
+                    <input
+                    type="tel"
+                    id="name"
+                    name="name"
+                    required
+                    minlength="4"
+                    maxlength="11"
+                    size="50">
+                    </div>
+                    <div>
+                    <label for="name">Возраст:</label>
+                    <input
+                    type="number"
+                    id="name"
+                    name="name"
+                    required
+                    minlength="1"
+                    maxlength="2"
+                    size="50">
+                   </div>
+                   <form action="/submit">
+                    <label for="conn">Способ связи:</label>
+                    <select id="conn" name="conn" required>
+                    <option value="">-- Выберите способ связи --</option>
+                    <option value="vk">ВКонтакте</option>
+                    <option value="tg">Телеграм</option>
+                    <option value="sms">Написать СМС по указанному номеру</option>
+                    <option value="tf">Позвонить по указанному номеру</option>
+                    </select>
+                    <div><button class="send-button cursor" type="submit">Отправить</button></div>
+                    </form>
+                    </Div>
+            </div>
+            </div>
+            
+        </section>
     </main>
 
 </body>
@@ -175,8 +229,47 @@
             font-size: 40px;
 
         }
+        .form-button {
+            color: black;
+            border: black 3px groove;
+            border-radius: 10px;
+            background-color: var(--salmon-pink);
+            width: fit-content;
+            margin: auto;        
+            font-family: CrashBandicoot;
+            font-size: 40px;
+            height: fit-content;
+        }
+        .send-button {
+            color: black;
+            border: black 3px groove;
+            border-radius: 10px;
+            transition: 0.3s;
+            background-color: var(--salmon-pink);
+            transition: 0.3s; 
+            font-family: CrashBandicoot;
+            font-size: 40px;
+            }
+        .send-button:hover {
+            scale: 1.1;
+        
+        }
+        }
         .dance-button:hover {
             scale: 1.1;
+        }
+        .form {
+             border-radius: 20px;
+        border: black 3px groove;
+        background-color: var(--blend-rose);
+        padding: 10px;
+        margin: 40px;
+        height: 500px;
+        gap: 30px; 
+        text-align: center;
+        font-size: 20px;
+        font-family: Comforta;
+        width: fit-content;
         }
     .street {
         display: flex;
@@ -306,6 +399,11 @@
         }
         .button:hover {
             scale: 1.1;
+        }
+        .margin-line {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
     </style>
 
