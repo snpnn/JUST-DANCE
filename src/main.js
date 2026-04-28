@@ -1,4 +1,5 @@
 
+
 // const name = 'Анфиса'
 
 // let age = 83 
@@ -34,20 +35,14 @@
 
 
 // нужно вывести в консоль сумму длин всех строк
-
 // const массивСтрок = ['j', 'q3r2222t', 'a4n', 'm1p9яячсчo', 'z8фывирпk2w', 'z8123фывирпk2wывыввыыв', 'h4j6yввввввввв']
 // let sum = 0;
 // for (let index=0; index<массивСтрок.length; index++) {
-//     sum += массивСтрок[index].length;    
+//     sum += массивСтрок[index].length;
 // }
 // console.log(sum);
 
-// for (let index=0; index<=100; index+=2) {
-//     console.log(index);
-// }
-
-
-const peoples = [
+const people = [
     { name: "Алексей", age: 16, pants: "джинсы", intoxicationLevel: 1 },
     { name: "Мария", age: 22, pants: "шорты", intoxicationLevel: 3 },
     { name: "Дмитрий", age: 14, pants: "юбка", intoxicationLevel: 0 },
@@ -64,15 +59,49 @@ const peoples = [
     { name: "Андрей", age: 17, pants: "джинсы", intoxicationLevel: 0 },
     { name: "Виктория", age: 19, pants: "шорты", intoxicationLevel: 4 }
 ];
+let да = 0;  
+let нет = 0;  
 
-let sum = 0;
-
-for (let index=0; index<peoples.length; index++) {
-    console.log(peoples[index].name, peoples[index].age);
-    sum += peoples[index].age;
-   
-    
+for (let index = 0; index < people.length; index++) {
+    if (people[index].age >= 18 && people[index].pants == "джинсы" && people[index].intoxicationLevel <= 2) {
+        да++;  
+    } else {
+        нет++;  
+    }
 }
-console.log(sum/peoples.length);
 
+console.log("Прошло: " + да);
+console.log("Не прошло: " + нет);
+
+let прошел = 0;
+let непрошел = 0;
+
+for (let index = 0; index < people.length; index++) {
+    const person = people[index];
+    let reasons = [];
+    
+    
+    const age = person.age >= 18;
+    const pants = person.pants == "джинсы";
+    const intoxication = person.intoxicationLevel <= 2;
+    
+    
+    if (!age) {
+        reasons.push(`возраст ${person.age} (<18)`);
+    }
+    if (!pants) {
+        reasons.push(`одежда "${person.pants}" (нужны джинсы)`);
+    }
+    if (!intoxication) {
+        reasons.push(`уровень опьянения ${person.intoxicationLevel} (>2)`);
+    }
+    
+    if (age && pants && intoxication) {
+       прошел++;
+        console.log(`${person.name} - прошео`);
+    } else {
+        непрошел++;
+        console.log(`${person.name} - не прошел (${reasons.join(", ")})`);
+    }
+}
 
